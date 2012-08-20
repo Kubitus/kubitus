@@ -1,9 +1,0 @@
-{
-  "name": "Kubitus",
-  "description": "Regie on line",
-  "menu": [
-    {"name": "Lorem", "link": "/home/"},
-    {"name": "Ipsum", "link": "/ipsum/"},
-    {"name": "Dolor sit amet", "link": "/dolor/"}
-  ]
-}
