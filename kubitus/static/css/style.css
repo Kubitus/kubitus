@@ -1,218 +1,314 @@
 @font-face {
-  font-family: "menu";
-  src: url(LANENAR_.ttf);
+  font-family: "txt";
+  src: url(CaviarDreams.ttf);
 }
 
 @font-face {
-  font-family: "h";
-  src: url(ComicJans.ttf);
+  font-family: "txt";
+  src: url(Caviar Dreams Bold.ttf);
+  font-weight: bold;
 }
 
-html{
-  background: url(img/shadow_top.png) top repeat-x,
-              url(img/shadow_bottom.png) bottom repeat-x,
-              url(img/back.png);
-  background: url(img/back.png) \9;
-  font: 0.9em Arial, Helvetica, sans-serif;
+html {
+  background: url(img/background.png) repeat-x top left;
+  font-family: "txt";
+  font-size: 1.05em;
   min-height: 100%;
-  text-align: center;
   width: 100%;
 }
 
-body{
-  background: url(img/shadow_top_body.png) top repeat-x,
-              url(img/shadow_bottom_body.png) bottom repeat-x,
-              url(img/back-content.png) white no-repeat top right;
-  background: white url(img/back-content.png)  no-repeat top right;       
-  box-shadow:0px 0px 8px #000000;
-  display: inline-block;
-  margin: 30px auto;
-  padding: 15px 25px;
+body {
+  margin: 0 auto;
   text-align: justify;
-  width: 900px;
+  width: 970px;
 }
 
-a{
+a {
   text-decoration: none;
   transition: color 0.3s linear;
 }
 
-h2:not([dummy]){
-  font-size: 2em;
-  float: right;
+p.center {
+  margin: 2em 0;
+  text-align: center;
 }
 
-h2{
-  background-image: linear-gradient(
-    left bottom,
-    rgb(170,212,0) 38%,
-    rgb(214,233,0) 84%
-);
-  background: #a9d300;
-  box-shadow:0px 0px 10px #828282, inset 0 0 1px #888;
-  color: white;
-  display: block;
-  font-family: "menu";
-  font-size: 1.5em;
-  margin-right: -25px;
-  padding: 0.2em 1em;
-  transform: rotate(-2deg);
-  text-transform: uppercase;
+p.note {
+  font-size: 80%;
 }
 
-h2 + * {
-  clear: both;
-}
-
-p {
-  text-indent: 25px;
-  line-height: 1.15em;
-}
-
-p:first-of-type {
-  text-indent: 0;
-}
-
-p:first-of-type:first-letter {
-  color: #566436;
-  float: left;
-  font-family: Times;
-  font-size: 4em;
-  line-height: 0.9em;
-  text-indent: 0px;
-  margin: 0 0.1em -0.25em 0;
-}
-
-h3:not([dummy]){
-  font-size:2em;
-}
-
-h3:before{
-  /*content: "→";*/
-  font
-  font-size:0.3em;
-  padding: 5px;
-  vertical-align: middle;
-}
-
-h3{
-  color: #a9d300;
-  font-family: "h";
-  font-size:1em;
-  text-indent: 25px;
-  text-transform: uppercase;
-}
 
 /*---HEADER--*/
-header{
+header {
   position: relative;
-  height: 242px;
-  margin-top: -30px;
-  *margin-top: 0px;
-  width: 236px;
   z-index:1;
 }
 
-header h1 a{
-  background: url(img/kubitus.png) no-repeat top left;
+header h1 {
+  margin: 0;
+}
+
+header h1 a {
+  background: url(img/logo-kubitus.png) no-repeat 0 4px;
   color: transparent;
   *color: white;
   font-size: 0;
-  width: 236px;
-  height: 242px;
+  height: 218px;
   display: block;
+  width: 238px;
 }
 
 /*---NAV--*/
 
-nav:not([dummy]){
-  z-index:-1;
-    margin: -200px -25px 200px 0;
-}
 
-nav{
-  margin: -80px 22px 80px 0;
-  transform: rotate(-90deg);
-  transform-origin: top right;
-  display: inline-block;
-  float: right;
+nav {
+  margin: -62px 0 0;
   position: relative;
+  text-align: right;
   z-index: 1;
 }
 
 nav ul {
+  margin: 0;
   padding: 0;
-  margin: 0
 }
 
-nav li{
-  display: inline;
-  text-transform: uppercase;
-}
-
-nav li a:not([dummy]){
-  color: white;
-}
-
-nav li a{
-  border: solid transparent;
-  border-width: 0 2px 2px 2px;
-  *border-width: 0; 
-  border-radius: 3px;
-  color: #a9d300;
-  line-height: 1em;
-  padding: 1em;
+nav ul > li {
   display: inline-block;
-  text-transform: uppercase;
-  text-shadow: 0px 0px 4px #333333; 
+  line-height: 65px;
 }
 
-nav li a[href]{
-  background-image: linear-gradient(
-    right top,
-    rgb(170,212,0) 38%,
-    rgb(214,233,0) 84%
-);
-  background-position: 0 -3em;
-  background-repeat: no-repeat;
-  color: #818181;
-  transition: all 0.6s;
+nav ul li.home {
+  background: #fff;
+  border-radius: 10px 10px 0 10px;
+  color: transparent;
+  font-size: 0;
+  height: 55px;
+  width: 55px;
 }
 
-nav li a[href]:hover, nav li a[href]:focus{
-  background-color: rgba(0, 0, 0, 0.5);
-  background-color: #a9d300\9;
-  background-position: 0 0;
-  color: white;
+nav ul li a {
+  color: #ddd;
+  display: block;
+  font-weight: bold;
+  padding: 0 8px;
 }
 
-nav li a:hover, nav li a:focus{
-  -color: white;
-  -background-color: #a9d300;
+nav ul li:hover ul {
+  display: inline-block;
+
+}
+
+nav ul li ul {
+  display: none;
+  position: absolute;
+  top: 63px;
+  text-align: left;
+  font-size: 90%;
+  background: #fff;
+  width: 220px;
+  padding: 0.5em 0;
+  border-radius: 0 15px 15px 15px; 
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+nav ul li ul li {
+  display: block;
+  height: 25px;
+  line-height: 20px;
+  padding: 0.4em 15px;
+}
+
+
+nav ul ul li a{
+color: #798c4b;
 }
 
 /*---SECTION--*/
 body > section{
-  background: rgba(165, 191, 104, 0.9) ;
-  box-shadow:0px 0px 10px #828282, inset 0 0 1px #888;
-  clear: both;
   color: #636464;
   margin: 0 auto;
-  transform: rotate(-2deg);	
-  width: 95%;
+  padding-top: 50px;
   position: relative;
-  top: -63px;
 }
 
-article{
-border: 1px solid #a5bf68;
-  background: white;
-  box-shadow:0px 0px 10px #828282;
-  margin: 0 auto;
-  padding: 15px;
-  transform: rotate(2deg);
-
+article section {
+  display: table-cell;
+  padding-right: 60px;
+  width: 710px;
 }
+
+article aside {
+  display: table-cell;
+  width: 200px;
+}
+
+article#home ul li {
+  background: no-repeat center left;
+  list-style: none;
+  padding: 1.1em 0 1.1em 65px;
+}
+
+article#home ul li.pills {
+  background-image: url(img/pills.png);
+}
+
+article#home ul li.internet {
+  background-image: url(img/internet.png);
+}
+
+article#home ul li.cross {
+  background-image: url(img/cross.png);
+}
+
+article#home ul li.tools {
+  background-image: url(img/tools.png);
+}
+
+
+/* - Home aside -*/
+aside div a {
+  display: block;
+  border: 1px solid;
+  text-align: center;
+  margin: 0 0 3em;
+  padding: 0.2em 15px;
+  text-transform: uppercase;
+}
+
+div.b-to-b a, ul.offer li.standard {
+  background: #f2f3f0;
+  border-color: #dfdfdf;
+  border-radius: 15px 15px 0 15px;
+  box-shadow: 1px 1px 1px #fcfcfb inset, 
+              0px 2px 3px rgba(0, 0, 0, 0.2);
+  color: #798c4b;
+  padding: 0.2em 15px;
+  text-shadow: 2px 1px 1px #fff;
+}
+
+div.b-to-c a, ul.offer li.personnal {
+  background: #9eb763;
+  background: -webkit-linear-gradient(#a4be66, #798c4b);
+  background: -moz-linear-gradient(#a4be66, #798c4b);
+  border-color: #a4be66;
+  border-radius: 0 15px 15px 15px;
+  box-shadow: 1px 1px 1px #bcd978 inset,
+              0px 2px 3px rgba(0, 0, 0, 0.2);
+  color: #f2f3f0;
+  text-shadow: 1px 1px 1px #515e33;
+}
+
+
+ul.offer {
+  text-align: center;
+  display: table;
+  padding: 0;
+  margin: 40px 0;
+  border-spacing: 25px 0;
+}
+
+ul.offer li {
+  border: 1px solid;
+  display: table-cell;
+  border-radius: 15px 15px 0 15px;
+  vertical-align: middle;
+}
+
+ul.offer li.standard a {
+  color: #798c4b;
+}
+
+ul.offer li.personnal {
+  border-radius: 0  15px 15px 15px;
+}
+
+ul.offer li.personnal a {
+  color: #f2f3f0;
+}
+
+ul.offer li.special {
+  background: #303A67
+  background: -moz-linear-gradient(#3f4c88, #303A67);
+  background: -webkit-linear-gradient(#3f4c88, #303A67);
+  border-color: #303A67;
+  box-shadow: 1px 1px 1px #5465B3 inset,
+              0 2px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 15px 15px 15px 0;
+}
+
+ul.offer li.special a {
+  color: #fff;
+  text-shadow: 1px 1px 1px #242C4D;
+}
+
+ul.offer li a {
+  font-weight: bold;
+  display: block;
+  font-size: 1.5em;
+  padding: 0.3em 20px; 
+  width: 240px;
+}
+
+
+dl dt {
+  font-weight: bold;
+}
+
+dl p {
+  margin: 0;
+  padding: 2px 0;
+}
+
+dl#banniere dt, #services dt {
+  text-transform: uppercase;
+}
+
+#services dd {
+  margin-left: 60px;
+}
+
+
+#services dt {
+  background: no-repeat top left;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 60px;
+}
+
+#services dt.agenda {
+  background-image: url("img/icon-agenda.png");
+}
+
+#services dt.extranet {
+  background-image: url("img/icon-extranet.png");
+}
+
+#services dt.media {
+  background-image: url("img/icon-media.png");
+}
+
+#services dt.warning {
+  background-image: url("img/icon-warning.png");
+}
+
+#services dt.print {
+  background-image: url("img/icon-print.png");
+}
+
+#services dt.image {
+  background-image: url("img/icon-image.png");
+}
+
+#services dt.frequence {
+  background-image: url("img/icon-frequence.png");
+}
+
+#services dt.screen {
+  background-image: url("img/icon-screen.png");
+}
+
+
 
 /*---FOOTER--*/
 footer{
