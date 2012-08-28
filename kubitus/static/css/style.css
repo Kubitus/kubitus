@@ -312,42 +312,81 @@ dl dt {
   font-weight: bold;
 }
 
-dl dd {
-  font-size: 0.9em;
-}
-
 dl#banniere {
   margin: 20px auto;
   width: 900px;
-}
-
-dl#banniere p img {
-  display: block;
-  margin: 0 auto;
 }
 
 dl p {
   margin: 0;
   padding: 2px 0;
 }
+
+
+
+/* - Accordion - */
 dl.accordion dt{
-  border-color: #303A67;
-  border: 1px solid;
-  border-radius: 15px 15px 15px 0;
+  background: no-repeat center left;
+  border-bottom: 1px solid #cdcdcd;
+  padding: 0.4em 10px 0.4em 85px;
+  line-height: 38px;
+  clear: left;
 }
 
-dl.accordion dt:before {
-  content: '[+]';
+dl.accordion  img {
+  float: left;
+  margin: 0 15px 0 42px;
+}
+
+dl.accordion dd {
+  background: url(img/dd-shadow.png) no-repeat top center;
+  padding-top: 10px;
+  overflow: auto;
+}
+
+dl.accordion dt:hover,
+dl.accordion dt:focus {
+  background-color: #e5e2e2;
+  cursor: pointer;
 }
 
 dl#banniere dt, #services dt {
   text-transform: uppercase;
 }
 
+dl.accordion dt.billboard-grand {
+  background-image: url(img/icon-billboard-grand.png);
+}
+
+dl.accordion dt.billboard-petit {
+  background-image: url(img/icon-billboard-petit.png);
+}
+
+dl.accordion dt.bandeau-haut {
+  background-image: url(img/icon-bandeau-haut.png);
+}
+
+dl.accordion dt.bandeau-bas {
+  background-image: url(img/icon-bandeau-bas.png);
+}
+
+dl.accordion dt.skyscrapper-large {
+  background-image: url(img/icon-skyscrapper-vertical-large.png);
+}
+
+dl.accordion dt.skyscrapper {
+  background-image: url(img/icon-skyscrapper-vertical.png);
+}
+
+dl.accordion dt.roadblock {
+  background-image: url(img/icon-roadblock.png);
+}
+
+
+
 #services dd {
   margin-left: 60px;
 }
-
 
 #services dt {
   background: no-repeat top left;
