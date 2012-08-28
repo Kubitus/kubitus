@@ -4,53 +4,39 @@
     <h2>Offres B to C</h2>
     <p>Kubitus vous offre la possibilité de faire des campagnes institutionnelles auprès du grand public (prévention grippe saisonnière, soleil, allergies...)</p>
     <p>Grâce à notre réseau de site Internet santé, vous ciblez et informez efficacement l'ensemble des personnes concernées. </p>
-    <strong>Voici les différentes possibilités d'affichage sur les sites Internet santé :</strong>
-    
-    
-    <dl id="banniere">
-      <dt>Billboard Grand</dt>
+    {% macro billboard_item(title, img, heigth, width) %}
+      <dt>{{ title }}</dt>
       <dd>
-        <p><img src="../static/css/img/billboard.png") no-repeat center top></p>
-        <p>Taille (en pixel) :300x250</p>
-        <p>C'est un format universel avec une très bonne visibilité. Il permet d'insérer de longs textes.</p>
+        <p><img src="{{url_for('static', filename="css/img/%s.png" % img)}}"></p>
+        <p>{{heigth}}x{{width}}</p>
+        <p>{{caller()}}</p>
       </dd>
-      <dt>Billboard Petit</dt>
-      <dd>
-        <p><img src="../static/css/img/bandeau-haut.png") no-repeat center top></p>
-        <p>Taille (en pixel) : 300x250</p>
-        <p>C'est un format universel avec une très bonne visibilité. Il permet d'insérer de longs textes.</p>
-      </dd>
-      <dt>Bandeau Haut</dt>
-      <dd>
-        <p><img src="../static/css/img/bandeau-haut.png") no-repeat center top></p>
-        <p>Taille (en pixel) :468x68</p>
-        <p>C'est un format universel avec une très bonne visibilité. Il permet d'insérer de longs textes.</p>
-      </dd>
-      <dt>Bandeau Bas</dt>
-      <dd>
-        <p><img src="../static/css/img/bandeau-bas.png") no-repeat center top></p>
-        <p>Taille (en pixel) :468x68</p>
-        <p>C'est un format universel avec une très bonne visibilité. Il permet d'insérer de longs textes.</p>
-      </dd>
-      <dt>Skyscrapper Vertical large Gauche ou Droit</dt>
-      <dd>
-        <p><img src="../static/css/img/skyscrapper-large.png") no-repeat center top></p>
-        <p>160x600</p>
-        <p>Le skyscrapper est un bandeau très répandu qui s'intègre facilement sur un site Internet . Il présente un bon moyen de remplir l'espace vide sur les côtés. Grâce à sa longueur, le skyscrapper est visible constamment même avec l'utilisation du scroll.</p>
-      </dd>
-      
-      <dt>Skyscrapper Vertical Gauche ou Droit</dt>
-      <dd>
-        <p><img src="../static/css/img/skyscrapper.png") no-repeat center top></p>
-        <p>Taille (en pixel) :120x600</p>
-        <p>Le skyscrapper est un bandeau très répandu qui s'intègre facilement sur un site Internet . Il présente un bon moyen de remplir l'espace vide sur les côtés. Grâce à sa longueur, le skyscrapper est visible constamment même avec l'utilisation du scroll.</p>
-      </dd>
-      <dt>Roablock</dt>
-      <dd>
-        <p><img src="../static/css/img/roadblock.png") no-repeat center top></p>
-        <p>Taille (en pixel) :300x250</p>
-        <p>Le Roadblock est un regroupement de formats. Vous pouvez par exemple,  allier un bandeau haut ou bas avec un skyscrapper vertical.  Il vous offre ainsi  une présence et une visibilité renforcée. </p>
-      </dd>
+    {% endmacro %}
+    <strong>Voici les différentes possibilités d'affichage sur les sites Internet santé</strong>
+    <dl id="banniere" class="accordion">
+    {% call billboard_item('Billboard Grand', 'billboard', 300, 250) %}
+    C'est un format universel avec une très bonne visibilité. Il permet d'insérer de longs textes.
+    {% endcall %}
+    {% call billboard_item('Billboard Petit', 'bandeau-haut', 300, 250) %}
+    C'est un format universel avec une très bonne visibilité. Il permet d'insérer de longs textes.
+    {% endcall %}
+    {% call billboard_item('Bandeau Haut', 'bandeau-haut', 468, 68) %}
+    C'est un format universel avec une très bonne visibilité. Il permet d'insérer de longs textes.
+    {% endcall %}
+    {% call billboard_item('Bandeau Bas', 'bandeau-bas', 468, 68) %}
+    C'est un format universel avec une très bonne visibilité. Il permet d'insérer de longs textes.
+    {% endcall %}
+    {% call billboard_item('Skyscrapper Vertical large Gauche ou Droit',
+    'skyscrapper-large', 160, 600) %}
+Le skyscrapper est un bandeau très répandu qui s'intègre facilement sur un site Internet . Il présente un bon moyen de remplir l'espace vide sur les côtés. Grâce à sa longueur, le skyscrapper est visible constamment même avec l'utilisation du scroll.
+    {% endcall %}
+    {% call billboard_item('Skyscrapper Vertical Gauche ou Droit',
+    'skyscrapper', 120, 600) %}
+Le skyscrapper est un bandeau très répandu qui s'intègre facilement sur un site Internet . Il présente un bon moyen de remplir l'espace vide sur les côtés. Grâce à sa longueur, le skyscrapper est visible constamment même avec l'utilisation du scroll.
+    {% endcall %}
+    {% call billboard_item('Roadblock', 'roadblock', 300, 250) %}
+Le Roadblock est un regroupement de formats. Vous pouvez par exemple,  allier un bandeau haut ou bas avec un skyscrapper vertical.  Il vous offre ainsi  une présence et une visibilité renforcée.
+    {% endcall %}
     </dl>
 
 {% endblock content %}

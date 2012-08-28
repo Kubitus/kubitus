@@ -330,6 +330,15 @@ dl p {
   margin: 0;
   padding: 2px 0;
 }
+dl.accordion dt{
+  border-color: #303A67;
+  border: 1px solid;
+  border-radius: 15px 15px 15px 0;
+}
+
+dl.accordion dt:before {
+  content: '[+]';
+}
 
 dl#banniere dt, #services dt {
   text-transform: uppercase;
