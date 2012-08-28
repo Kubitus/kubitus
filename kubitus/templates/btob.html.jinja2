@@ -1,12 +1,59 @@
 {% extends '_layout.html.jinja2' %}
 
 {% block content %}
-    <h2>Offre B to B</h2>
+    <header>
+      <h2>Offre B to B</h2>
+    </header>
     <p>Vous souhaitez faire une campagne de communication à titre professionnel pour les acteurs de santé ? Kubitus permet d'adresser votre publicité à une sélection de clients de votre choix.</p>
     <ul class="offer">
       <li class="standard"><a href="{{url_for('page', page='standard')}}">Offre Standard</a></li>
       <li class="personnal"><a href="{{url_for('page', page='personnal')}}">Offre Sur-Mesure</a></li>
       <li class="special"><a href="{{url_for('page', page='special')}}">Offre Spéciales Laboratoires Pharmaceutiques</a></li>
     </ul>
-    <p>Voici les différentes possibilités d'affichage sur les sites Internet santé en offre B to B</p>
+    <strong>Voici les différentes possibilités d'affichage sur les sites Internet santé en offre B to B :</strong>
+        <dl id="banniere">
+      <dt>Billboard Grand</dt>
+      <dd>
+        <p><img src="../static/css/img/billboard.png") no-repeat center top></p>
+        <p>300x250</p>
+        <p>C'est un format universel avec une très bonne visibilité. Il permet d'insérer de longs textes.</p>
+      </dd>
+      <dt>Billboard Petit</dt>
+      <dd>
+        <p><img src="../static/css/img/bandeau-haut.png") no-repeat center top></p>
+        <p>300x250</p>
+        <p>C'est un format universel avec une très bonne visibilité. Il permet d'insérer de longs textes.</p>
+      </dd>
+      <dt>Bandeau Haut</dt>
+      <dd>
+        <p><img src="../static/css/img/bandeau-haut.png") no-repeat center top></p>
+        <p>468x68</p>
+        <p>C'est un format universel avec une très bonne visibilité. Il permet d'insérer de longs textes.</p>
+      </dd>
+      <dt>Bandeau Bas</dt>
+      <dd>
+        <p><img src="../static/css/img/bandeau-bas.png") no-repeat center top></p>
+        <p>468x68</p>
+        <p>C'est un format universel avec une très bonne visibilité. Il permet d'insérer de longs textes.</p>
+      </dd>
+      <dt>Skyscrapper Vertical large Gauche ou Droit</dt>
+      <dd>
+        <p><img src="../static/css/img/skyscrapper-large.png") no-repeat center top></p>
+        <p>160x600</p>
+        <p>Le skyscrapper est un bandeau très répandu qui s'intègre facilement sur un site Internet . Il présente un bon moyen de remplir l'espace vide sur les côtés. Grâce à sa longueur, le skyscrapper est visible constamment même avec l'utilisation du scroll.</p>
+      </dd>
+      
+      <dt>Skyscrapper Vertical Gauche ou Droit</dt>
+      <dd>
+        <p><img src="../static/css/img/skyscrapper.png") no-repeat center top></p>
+        <p>120x600</p>
+        <p>Le skyscrapper est un bandeau très répandu qui s'intègre facilement sur un site Internet . Il présente un bon moyen de remplir l'espace vide sur les côtés. Grâce à sa longueur, le skyscrapper est visible constamment même avec l'utilisation du scroll.</p>
+      </dd>
+      <dt>Roablock</dt>
+      <dd>
+        <p><img src="../static/css/img/roadblock.png") no-repeat center top></p>
+        <p>300x250</p>
+        <p>Le Roadblock est un regroupement de formats. Vous pouvez par exemple,  allier un bandeau haut ou bas avec un skyscrapper vertical.  Il vous offre ainsi  une présence et une visibilité renforcée. </p>
+      </dd>
+    </dl>
 {% endblock content %}

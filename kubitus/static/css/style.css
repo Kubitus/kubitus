@@ -10,17 +10,18 @@
 }
 
 html {
-  background: url(img/background.png) repeat-x top left;
+  background: #e5e2e2 url(img/background.png) repeat-x top left;
   font-family: "txt";
-  font-size: 1.05em;
+  font-size: 1em;
   min-height: 100%;
   width: 100%;
 }
 
 body {
+
   margin: 0 auto;
   text-align: justify;
-  width: 970px;
+  width: 990px;
 }
 
 a {
@@ -39,7 +40,8 @@ p.note {
 
 
 /*---HEADER--*/
-header {
+body > header {
+  background: url(img/header-shadow.png) no-repeat center 8px;
   position: relative;
   z-index:1;
 }
@@ -49,86 +51,111 @@ header h1 {
 }
 
 header h1 a {
-  background: url(img/logo-kubitus.png) no-repeat 0 4px;
+  background: url(img/logo.png) no-repeat 0 0;
   color: transparent;
   *color: white;
-  font-size: 0;
-  height: 218px;
   display: block;
-  width: 238px;
+  font-size: 0;
+  height: 150px;
+  width: 257px;
 }
 
-/*---NAV--*/
+header aside {
+  font-size: 1.25em;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
 
-
-nav {
-  margin: -62px 0 0;
-  position: relative;
+header aside ul {
+  background: #fff;
+  list-style: none;
+  margin: 0;
+  padding: 0 10px 0 0;
   text-align: right;
-  z-index: 1;
+}
+
+header aside ul:before {
+  float: left;
+  content: url(img/aside.png);
+  margin-left: -66px;
+  margin-top: 1px;
+}
+
+
+
+/*---NAV--*/
+nav {
+  background: url(img/header-shadow2.png) no-repeat center 20px;
+  font-size: 1.25em;
+  margin: 45px 0 -15px;
 }
 
 nav ul {
+  background: #f6f4f4;
+  box-shadow: 2px 2px 2px #fff inset;
+  display: inline-block;
   margin: 0;
-  padding: 0;
+  padding: 10px 4px 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+nav > ul:before {
+  content:url(img/nav.png);
+  float: right;
+  margin-right: -70px;
+  margin-top: -10px;
 }
 
 nav ul > li {
   display: inline-block;
-  line-height: 65px;
 }
 
-nav ul li.home {
-  background: #fff;
-  border-radius: 10px 10px 0 10px;
-  color: transparent;
-  font-size: 0;
-  height: 55px;
-  width: 55px;
-}
-
+header aside ul li a,
 nav ul li a {
-  color: #ddd;
+  color: #727272;
   display: block;
+  font-variant: small-caps;
   font-weight: bold;
-  padding: 0 8px;
+  padding: 8px;
 }
 
 nav ul li:hover ul {
   display: inline-block;
-
 }
 
 nav ul li ul {
   display: none;
   position: absolute;
-  top: 63px;
   text-align: left;
-  font-size: 90%;
+  font-size: 80%;
   background: #fff;
   width: 220px;
-  padding: 0.5em 0;
+  padding: 0.2em 0;
   border-radius: 0 15px 15px 15px; 
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+  top: 40px;
 }
 
 nav ul li ul li {
   display: block;
-  height: 25px;
-  line-height: 20px;
-  padding: 0.4em 15px;
+  padding: 0.2em 15px;
 }
-
 
 nav ul ul li a{
 color: #798c4b;
 }
 
+
 /*---SECTION--*/
-body > section{
+body > section {
+  background: #f6f4f4;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   color: #636464;
   margin: 0 auto;
-  padding-top: 50px;
+  padding: 40px 40px 40px;
   position: relative;
 }
 
@@ -138,15 +165,45 @@ article section {
   width: 710px;
 }
 
+article#home section {
+  padding-right: 70px;
+  width: 700px;
+}
+
+section header {
+  border-bottom: 1px solid #dcd8d8;
+}
+
+section header h2 {
+  border-bottom: 6px solid #98ab74;
+  margin: 25px 0 0;
+  padding: 0.1em 15px 0.1em 5px;
+  display: inline-block;
+  text-shadow: 1px 1px 1px #fff;
+}
+
+section section h2 {
+  border-bottom: 6px solid #a4be66;
+  font-size: 1.8em;
+  font-variant: small-caps;
+  padding: 0.5em 0 0.2em;
+  text-align: center;
+}
+
+
 article aside {
   display: table-cell;
   width: 200px;
 }
 
+article#home ul {
+  padding: 0;
+}
+
 article#home ul li {
   background: no-repeat center left;
   list-style: none;
-  padding: 1.1em 0 1.1em 65px;
+  padding: 1.1em 0 1.1em 90px;
 }
 
 article#home ul li.pills {
@@ -247,12 +304,26 @@ ul.offer li a {
   display: block;
   font-size: 1.5em;
   padding: 0.3em 20px; 
-  width: 240px;
+  width: 220px;
 }
 
 
 dl dt {
   font-weight: bold;
+}
+
+dl dd {
+  font-size: 0.9em;
+}
+
+dl#banniere {
+  margin: 20px auto;
+  width: 900px;
+}
+
+dl#banniere p img {
+  display: block;
+  margin: 0 auto;
 }
 
 dl p {
