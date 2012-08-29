@@ -428,6 +428,28 @@ dl.accordion dt.roadblock {
 }
 
 
+.silex {
+    margin: 20px;
+}
+a.silex-icon {
+    width: 16px;
+    height: 16px;
+}
+a.silex-icon.grid {
+    background-image: url('img/grid.png')
+}
+a.silex-icon.prev {
+    background-image: url('img/prev.png')
+}
+a.silex-icon.next {
+    background-image: url('img/next.png')
+}
+a.silex-icon.play {
+    background-image: url('img/play.png')
+}
+a.silex-icon.pause {
+    background-image: url('img/pause.png')
+}
 
 /*---FOOTER--*/
 footer{
