@@ -9,6 +9,12 @@
   font-weight: bold;
 }
 
+@font-face {
+  font-family: "title";
+  src: url(ClementePDam-Bold.ttf);
+  font-weight: bold;
+}
+
 html {
   background: #e5e2e2 url(img/background.png) repeat-x top left;
   font-family: "txt";
@@ -18,7 +24,7 @@ html {
 }
 
 body {
-
+  background: url(img/header.png) no-repeat right 8px;
   margin: 0 auto;
   text-align: justify;
   width: 990px;
@@ -27,6 +33,20 @@ body {
 a {
   text-decoration: none;
   transition: color 0.3s linear;
+}
+
+form {
+  font-size: 92%;
+  margin: 20px 0;
+}
+
+form label {
+  display: block;
+}
+
+form input {
+  display: block;
+  margin-bottom: 0.5em;
 }
 
 p.center {
@@ -229,11 +249,42 @@ aside div a {
   border: 1px solid;
   text-align: center;
   margin: 0 0 3em;
-  padding: 0.2em 15px;
-  text-transform: uppercase;
+  padding: 0em 15px;
 }
 
-div.b-to-b a, ul.offer li.standard {
+aside div a h2 {
+  font-family: Title;
+  font-size: 1.9em; 
+  font-variant: small-caps;
+  margin: 0;
+  padding: 0.5em 0;
+}
+
+div.b-to-b a, div.b-to-c a {
+  background: linear-gradient(#f1f1f1, #e5e5e5);
+  background: -moz-linear-gradient(#f1f1f1, #e5e5e5);
+  background: -webkit-linear-gradient(#f1f1f1, #e5e5e5);
+  box-shadow: 1px 1px 1px #fcfcfb inset, 
+              0px 2px 3px rgba(0, 0, 0, 0.2);
+  text-shadow: 2px 1px 1px #fff;
+}
+
+div.b-to-c a {
+  border-color: #bbc2e2;
+  border-radius: 0 15px 15px 15px;
+  color: #3F4C88;
+}
+
+div.b-to-b a {
+  border-color: #dfdfdf;
+  color: #9d9d9d;
+  border-radius: 15px 15px 0 15px;
+  box-shadow: 1px 1px 1px #fcfcfb inset, 
+              0px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+
+ul.offer li.standard {
   background: #f2f3f0;
   border-color: #dfdfdf;
   border-radius: 15px 15px 0 15px;
@@ -244,7 +295,7 @@ div.b-to-b a, ul.offer li.standard {
   text-shadow: 2px 1px 1px #fff;
 }
 
-div.b-to-c a, ul.offer li.personnal {
+ul.offer li.personnal {
   background: #9eb763;
   background: -webkit-linear-gradient(#a4be66, #798c4b);
   background: -moz-linear-gradient(#a4be66, #798c4b);
@@ -426,6 +477,23 @@ dl.accordion dt.roadblock {
 #services dt.screen {
   background-image: url("img/icon-screen.png");
 }
+
+#services dt.lingot {
+  background-image: url(img/icon-lingot.png);
+}
+
+#services dt.drawer {
+  background-image: url(img/icon-drawer.png);
+}
+
+#services dt.promo {
+  background-image: url(img/icon-promo.png);
+}
+
+#services dt.couponning {
+  background-image: url(img/icon-couponning.png);
+}
+
 
 
 .silex {
