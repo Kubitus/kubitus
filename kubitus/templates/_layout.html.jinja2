@@ -18,11 +18,7 @@
     <body>
         <header>
           <h1><a href="{{url_for('page', page='index')}}">Kubitus</a></h1>
-          <aside>
-            <ul>
-              <li><a href="{{url_for('page', page='member')}}">Accès client</a></li>
-             </ul>
-           </aside>
+
         </header>
         
         <nav>
@@ -37,10 +33,11 @@
             </li>
             <li><a href="{{url_for('page', page='partenaires')}}">Partenaires</a></li>
             <li><a href="{{url_for('page', page='contact')}}">Contactez-nous</a></li>
+                          <li><a href="{{url_for('page', page='member')}}">Accès client</a></li>
           </ul>
         </nav>
         
-        <section>
+        <section class="{{ page }}">
           {% block content %}
          {% endblock content %}
        </section>

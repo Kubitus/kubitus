@@ -9,4 +9,4 @@ def index():
 
 @app.route('/<string:page>/')
 def page(page):
-    return render_template('%s.html.jinja2' % page)
+    return render_template('%s.html.jinja2' % page, page=page)
