@@ -85,7 +85,7 @@ a.button, form input[type="submit"] {
   border-radius: 5px;
   font-size: 1em;
   font-family: txt;
-  color: #496b2b;
+  color: #3f5d25;
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
   padding: 0.3em 15px;
 }
@@ -146,7 +146,7 @@ header h1 {
 }
 
 header h1 a {
-  background: url(img/logo.png) no-repeat 0 0;
+  background: url(img/logo.png) no-repeat 0 -1px;
   color: transparent;
   *color: white;
   display: block;
