@@ -207,6 +207,7 @@ nav > ul:before {
 
 nav ul > li {
   display: inline-block;
+  position: relative;
 }
 
 header aside ul li a,
@@ -234,8 +235,9 @@ nav ul li ul {
   padding: 0.2em 0;
   position: absolute;
   text-align: left;
-  top: 45px;
+  top: 32px;
   width: 190px;
+  left: 0;
 }
 
 nav ul li ul li {
@@ -389,8 +391,6 @@ ul.offer li.standard {
   border-radius: 15px 15px 0 15px;
   box-shadow: 1px 1px 1px #fcfcfb inset, 
               0px 2px 3px rgba(0, 0, 0, 0.2);
-
-  padding: 0.2em 15px;
   text-shadow: 2px 1px 1px #fff;
 }
 
@@ -439,7 +439,7 @@ ul.offer li {
   display: inline-block;
   border-radius: 15px 15px 0 15px;
   vertical-align: middle;
-  margin: 0 15px;
+  margin: 0 18px;
   height: 100px;
 }
 
@@ -456,7 +456,7 @@ ul.offer li.personnal a {
 }
 
 ul.offer li.special {
-  background: #303A67
+  background: #303A67;
   background: -moz-linear-gradient(#3f4c88, #303A67);
   background: -webkit-linear-gradient(#3f4c88, #303A67);
   border-color: #303A67;
