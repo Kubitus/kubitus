@@ -31,6 +31,7 @@ body {
 }
 
 a {
+  border: none;
   color: #65933d;
   text-decoration: none;
   transition: color 0.3s linear;
@@ -495,7 +496,30 @@ dl p {
   padding: 2px 0;
 }
 
+.pharminfo {
+  border-bottom: 1px solid #ddd;
+}
 
+div.pharminfo, div.medsite {
+  padding: 15px 0 20px;
+  overflow: auto;
+}
+
+div.pharminfo h3, div.medsite h3 {
+  color: #65933D;
+  text-decoration: underline;
+}
+
+.pharminfo img, .medsite img {
+  float: left;
+}
+
+
+
+
+div.medsite {
+  clear: left;
+}
 
 /* - Accordion - */
 dl.accordion dt{

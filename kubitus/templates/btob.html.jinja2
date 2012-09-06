@@ -8,23 +8,23 @@
     <ul class="offer">
       <li class="standard"><a href="{{url_for('page', page='standard')}}">Offre Standard</a></li>
       <li class="personnal"><a href="{{url_for('page', page='personnal')}}">Offre Sur-Mesure</a></li>
-      <li class="special"><a href="{{url_for('page', page='special')}}">Offre Spéciales Laboratoires Pharmaceutiques</a></li>
+      <li class="special"><a href="{{url_for('page', page='special')}}">Offre Spéciale Laboratoires Pharmaceutiques</a></li>
     </ul>
     {% macro billboard_item(title, img, heigth, width) %}
       <dt class={{img}}>{{ title }}</dt>
       <dd>
         <p><img src="{{url_for('static', filename="css/img/%s.png" % img)}}"></p>
-        <p>{{heigth}}x{{width}}</p>
+        <p>{{heigth}}x{{width}}px (en pixels)</p>
         <p>{{caller()}}</p>
       </dd>
     {% endmacro %}
     <strong>Voici les différentes possibilités d'affichage sur les sites Internet santé</strong>
     <dl id="banniere" class="accordion">
     {% call billboard_item('Billboard Grand', 'billboard-grand', 300, 250) %}
-    C'est un format universel avec une très bonne visibilité. Il permet d'insérer de longs textes.
+    Le Billboard permet d'intégrer une animation vidéo courte (10 sec maximum)
     {% endcall %}
     {% call billboard_item('Billboard Petit', 'billboard-petit', 300, 250) %}
-    C'est un format universel avec une très bonne visibilité. Il permet d'insérer de longs textes.
+    Le Billboard permet d'intégrer une animation vidéo courte (10 sec maximum)
     {% endcall %}
     {% call billboard_item('Bandeau Haut', 'bandeau-haut', 468, 68) %}
     C'est un format universel avec une très bonne visibilité. Il permet d'insérer de longs textes.
@@ -41,7 +41,7 @@ Le skyscrapper est un bandeau très répandu qui s'intègre facilement sur un si
 Le skyscrapper est un bandeau très répandu qui s'intègre facilement sur un site Internet . Il présente un bon moyen de remplir l'espace vide sur les côtés. Grâce à sa longueur, le skyscrapper est visible constamment même avec l'utilisation du scroll.
     {% endcall %}
     {% call billboard_item('Roadblock', 'roadblock', 300, 250) %}
-Le Roadblock est un regroupement de formats. Vous pouvez par exemple,  allier un bandeau haut ou bas avec un skyscrapper vertical.  Il vous offre ainsi  une présence et une visibilité renforcée.
+Le Roadblock est un regroupement de formats. Vous pouvez par exemple,  allier un bandeau haut ou bas avec un skyscrapper vertical.  Il vous offre ainsi  une présence et une visibilité renforcées.
     {% endcall %}
     </dl>
 {% endblock content %}
