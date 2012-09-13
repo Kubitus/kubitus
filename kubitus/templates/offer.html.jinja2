@@ -2,6 +2,7 @@
 
 {% block content %}
   {% block offer %}
+  <article>
     <header>
       <h2><a href="{{ url_for('page', page='btob')}}">Offres B to B</a></h2>
     </header>
@@ -14,5 +15,5 @@
   
   {% block description %}
   {% endblock description %}
-
+</article>
 {% endblock content %}

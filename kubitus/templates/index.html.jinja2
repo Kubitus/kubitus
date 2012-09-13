@@ -1,37 +1,42 @@
 {% extends '_layout.html.jinja2' %}
 
 {% block content %}
-  <article id="home">
-    <section>
-      <ul>
-        <li class="pills">Kubitus est une régie média dédiée au secteur de la santé</li>
-        <li class="internet">Kubitus fait bénéficier ses clients annonceurs de son important réseau de sites Internet santé</li>
-        <li class="cross">Kubitus vous permet d'adresser vos campagnes de communication aux différentes catégories de professionnels de santé (pharmaciens d'officine, médecins...)</li>
-        <li class=" tools">Grâce à la technologie déployée par Kubitus, vous optimisez la diffusion ciblée de votre information (géolocalisation, spécialité, panel...).</li>
-      </ul>
-      <div class="silex">
-        <img src="../static/css/img/pharmacie-temoin3.gif">
-        <img src="../static/css/img/pharmacie-temoin1.gif">
-        <img src="../static/css/img/pharmacie-temoin4.gif">
-        <img src="../static/css/img/pharmacie-temoin5.gif">
-      </div>
+  <article class="home">
+    <ul>
+      <li class="pills">Kubitus est une régie média dédiée au secteur de la santé</li>
+      <li class="internet">Kubitus fait bénéficier ses clients annonceurs de son important réseau de sites Internet santé</li>
+      <li class="cross">Kubitus vous permet d'adresser vos campagnes de communication aux différentes catégories de professionnels de santé (pharmaciens d'officine, médecins ...)</li>
+      <li class=" tools">Grâce à la technologie déployée par Kubitus, vous optimisez la diffusion ciblée de votre information (spécialité, géolocalisation, panel ...).</li>
+    </ul>
+  </article>
+
+    <article class="home second">
+      <section>
+        <div class="silex">
+          <img src="../static/css/img/pharmacie-temoin3.gif">
+          <img src="../static/css/img/pharmacie-temoin1.gif">
+          <img src="../static/css/img/pharmacie-temoin4.gif">
+          <img src="../static/css/img/pharmacie-temoin5.gif">
+        </div>
+        
+        <aside>
+          <div class="graphique">
+            <h2>Conception graphique</h2>
+            <p>Notre équipe graphique est à votre disposition pour l'élaboration et la conception de toutes vos bannières.</p>
+            <a href="{{url_for('page', page='graphique')}}">En savoir plus</a>
+          </div>
+          <div class="b-to-c">
+            <h2>Offres B to C</h2>
+            <p>Kubitus vous offre la possibilité de faire des campagnes de communication à titre professsionel.</p>
+            <a href="{{url_for('page', page='btoc')}}" class="b-to-c"> En savoir plus</a>
+          </div>
+          <div class="b-to-b">
+            <h2>Offres B to B</h2>
+            <p>Kubitus vous offre la possibilité de faire des campagnes institutionnelles auprès du grand public.</p>
+            <a href="{{url_for('page', page='btob')}}" class="b-to-b">En savoir plus</a>
+          </div>
+      </aside>
     </section>
-    
-    <aside>
-      <div class="b-to-b">
-        <a href="{{url_for('page', page='btob')}}">
-          <h2>Offres <br/>B to B</h2>
-        </a>
-      </div>
-      <div class="b-to-c">
-        <a href="{{url_for('page', page='btoc')}}">
-        <h2>Offres <br/>B to C</h2>
-      </a>
-      </div>
-    </aside>
-  
-    </article>
-    <article>
   </article>
 
 {% endblock content %}

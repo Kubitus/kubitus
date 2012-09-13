@@ -1,12 +1,13 @@
 {% extends '_layout.html.jinja2' %}
 
 {% block content %}
+<article>
   <header>
     <h2>Accès Client</h2>
   </header>
   
   <div class="member">
-    <h3>Déjà membre ...</h3>
+    <h3>Vous êtes client</h3>
     <form>
       <label>Identifiant</label>
       <input type="text" />
@@ -17,8 +18,8 @@
   </div>
   
   <div class="no-member">
-    <h3>Inscrivez-vous</h3>
+    <h3>Vous n'êtes pas client, inscrivez-vous !</h3>
     <p><a a href="{{url_for('page', page='contact')}}" class="button">S'enregistrer</a></p>
   </div>
-
+</article>
 {% endblock content %}
