@@ -341,6 +341,7 @@ section.personnal ul.offer li.personnal:after {
 
 section.special ul.offer li.special:after {
   content:url(img/arrow-special.png);
+  margin: -3px 0 -44px 97px;
 }
 
 ul.offer li.personnal {
@@ -772,8 +773,12 @@ footer li {
   display: inline;
 }
 
-footer ul li {
+footer ul li, footer ul li a {
   color: #302921;
   text-shadow: 1px 1px 1px #7c7165;
+}
+
+footer ul li a:hover, footer ul li a:focus {
+  color: #000;
 }
 
