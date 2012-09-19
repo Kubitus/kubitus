@@ -440,6 +440,7 @@ div.pharminfo h3, div.medsite h3 {
 
 .pharminfo img, .medsite img {
   float: left;
+  margin-right: 50px;
 }
 
 div.medsite {

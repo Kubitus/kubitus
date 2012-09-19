@@ -6,7 +6,7 @@
     <h2>Offres B to C</h2>
   </header>
   <p>Kubitus vous offre la possibilité de faire des campagnes institutionnelles auprès du grand public (prévention grippe saisonnière, soleil, allergies...)</p>
-  <p>Grâce à notre réseau de sites Internet santé, vous ciblez et informez efficacement l'ensemble des personnes concernées. </p>
+  <p>Grâce à notre réseau de sites Internet santé, vous ciblez et informez efficacement l'ensemble des populations concernées.</p>
 
 
   {% macro billboard_item(title, img, heigth, width) %}
@@ -17,7 +17,7 @@
          <p>{{caller()}}</p>
     </dd>
     {% endmacro %}
-    <strong>Voici les différentes possibilités d'affichage sur les sites Internet santé</strong> :
+    <p><strong>- Différentes possibilités d'affichage sur les sites Internet santé</strong> :</p>
     <dl id="banniere" class="accordion">
     {% call billboard_item('Billboard Grand', 'billboard-grand', 300, 250) %}
     Le Billboard permet d'intégrer une animation vidéo courte (10 sec. maximum).
@@ -33,11 +33,11 @@
     {% endcall %}
     {% call billboard_item('Skyscrapper Vertical large Gauche ou Droit',
     'skyscrapper-large', 160, 600) %}
-Le skyscrapper est un bandeau très répandu qui s'intègre facilement sur un site Internet. Il présente un bon moyen de remplir l'espace vide sur les côtés. Grâce à sa longueur, le skyscrapper est visible constamment même avec l'utilisation du scroll.
+Le skyscrapper est un bandeau très répandu qui s'intègre facilement sur un site Internet. Il présente un bon moyen de remplir l'espace vide sur les côtés. Grâce à sa longueur, le skyscrapper est visible constamment même avec l'utilisation du "scroll".
     {% endcall %}
     {% call billboard_item('Skyscrapper Vertical Gauche ou Droit',
     'skyscrapper', 120, 600) %}
-Le skyscrapper est un bandeau très répandu qui s'intègre facilement sur un site Internet. Il présente un bon moyen de remplir l'espace vide sur les côtés. Grâce à sa longueur, le skyscrapper est visible constamment même avec l'utilisation du scroll.
+Le skyscrapper est un bandeau très répandu qui s'intègre facilement sur un site Internet. Il présente un bon moyen de remplir l'espace vide sur les côtés. Grâce à sa longueur, le skyscrapper est visible constamment même avec l'utilisation du "scroll".
     {% endcall %}
     {% call billboard_item('Roadblock', 'roadblock', 300, 250) %}
 Le Roadblock est un regroupement de formats. Vous pouvez par exemple,  allier un bandeau haut ou bas avec un skyscrapper vertical.  Il vous offre ainsi  une présence et une visibilité renforcées.
