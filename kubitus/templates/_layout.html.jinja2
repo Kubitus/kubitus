@@ -18,20 +18,8 @@
     <body>
         <header>
           <h1><a href="{{url_for('page', page='index')}}">Kubitus</a></h1>
-
         </header>
-        
-        {% with messages = get_flashed_messages() %}
-          {% if messages %}
-            <aside class="messages">
-              <ul>
-                {% for message in messages %}
-                  <li>{{ message }}</li>
-                {% endfor %}
-              </ul>
-            </aside>
-          {% endif %}
-        {% endwith %}
+
 
         <nav>
           <ul>
@@ -49,9 +37,22 @@
           </ul>
         </nav>
         
+
+
         <section class="{{ page }}">
+          {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+              <aside class="messages">
+                <ul>
+                  {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                  {% endfor %}
+                </ul>
+              </aside>
+            {% endif %}
+          {% endwith %}
           {% block content %}
-         {% endblock content %}
+          {% endblock content %}
        </section>
        
        <footer>
