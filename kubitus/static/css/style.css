@@ -282,6 +282,7 @@ article.home.second {
 section {
   background: #f6f4f2;
   color: #695E52;
+  overflow: hidden;
 }
 
 section header {
@@ -578,6 +579,60 @@ dl.accordion dt.roadblock {
   background-image: url(img/icon-couponning.png);
 }
 
+
+
+/* - Massage - */
+section > .messages {
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  position: relative;
+  margin: 35px auto 15px;
+  width: 50%;
+}
+
+section > .messages ul{
+  list-style: none;
+  padding: 0;
+}
+
+section > .messages ul li:before {
+   border: 1px solid transparent;
+   display: block;
+   font-size: 1.2em;
+   font-weight: bold;
+   padding: 5px 5%;
+   margin: -5px -5.5% 10px;
+   text-transform: uppercase;
+   width: 101%;
+}
+
+section > .messages ul li {
+  padding: 5px 5%;
+}
+
+.error {
+  background: rgba(124, 4, 1, 0.5);
+  border: 1px solid #7c0401;
+}
+
+li.error:before {
+   background: #7c0401;
+   border-color: #7c0401;
+   content: 'Attention';
+}
+
+li.info {
+  background: rgba(1, 124, 16, 0.5);
+  border: 2px solid #017c10;
+}
+
+li.info:before {
+  background: #017c10;
+  border-color: #017c10;
+  content: 'Information';
+}
+
+
 /*
   --------
   - HOME -
@@ -595,7 +650,6 @@ section article {
 
 article.home {
   background: #f6f4f4;
-  border-top: 1px solid #dcd7cf;
 }
 
 article.home ul {
@@ -653,6 +707,10 @@ article.home.second aside div {
   margin: 15px 0 15px 60px;
   overflow: auto;
   padding: 8px 15px;
+}
+
+article.home.second section {
+  background: #fff;
 }
 
 article.home.second aside h2 {
