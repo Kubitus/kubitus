@@ -100,6 +100,11 @@ form textarea:hover, form textarea:focus {
   background: url(img/icon-address.png) no-repeat top left;
 }
 
+.address .download {
+  display: block;
+  padding-top: 1.5em;
+}
+
 .mail {
   background: url(img/icon-mail.png) no-repeat top left;
 }
