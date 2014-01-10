@@ -734,11 +734,11 @@ article.home.second aside .graphique h2 {
 }
 
 article.home.second aside .b-to-c h2 {
-  background: url(img/icon-b-to-c.png) no-repeat center  left;
+  background: url(img/icon-b-to-b.png) no-repeat center  left;
 }
 
 article.home.second aside .b-to-b h2 {
-  background: url(img/icon-b-to-b.png) no-repeat center left;
+  background: url(img/icon-b-to-c.png) no-repeat center left;
 }
 
 article.home.second aside a {
