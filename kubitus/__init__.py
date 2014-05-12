@@ -88,7 +88,7 @@ Commentaire :
     message['From'] = 'contact@kubitus.fr'
     message['To'] = 'contact@kubitus.fr'
 
-    server = SMTP('smtp.keleos.fr')
+    server = SMTP('smtp.kozea.fr')
     server.sendmail(
         'contact@kubitus.fr', ['contact@kubitus.fr'],
         message.as_string())
